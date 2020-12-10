@@ -1,0 +1,21 @@
+rootProject.name = "FormatProject"
+include '0_app'
+//展示层
+include '1_ui:map'
+include '1_ui:multimedia'
+
+//业务层
+//业务层-接口
+include '2_buz:api'
+//业务层-实现
+include '2_buz:impl:services'//核心服务
+include '2_buz:impl:sdk_3rd'//三方sdk
+
+//公共库
+include '3_libs:components'//公共组件
+include '3_libs:utils'//工具包
+include '3_libs:widgets'//自定义控件
+include '3_libs:base'//
+
+
+
