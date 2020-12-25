@@ -12,6 +12,13 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        //aroute
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
     }
 
     buildTypes {
@@ -29,5 +36,11 @@ dependencies {
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //依赖注入
+    implementation project(path: ':3_libs:components')
+    implementation project(path: ':3_libs:base')
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.30.1'
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.30.1'
 
 }
